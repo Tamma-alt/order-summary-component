@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+--color-paleblue: hsl(225, 100%, 94%);
+--color-brightblue: hsl(245, 75%, 52%);
+--color-verypaleblue: hsl(225, 100%, 98%);
+--color-desaturatedblue: hsl(224, 23%, 55%);
+--color-darkblue: hsl(223, 47%, 23%);
+--color-white: hsl(0, 0%, 100%);
+    
+}
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--color-paleblue);
+    min-height: 100vh;
+    position: relative;
+    
+}
+
+.container{
+    max-width: 450px;
+    margin: 30px auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--color-white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.order{
+    padding: 20px;
+}
+
+.title{
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.sub-title{
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.plan-box{
+    background-color: var(--color-verypaleblue);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    font-weight: 700;
+}
+.plan-box .left{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.plan-box .left div{
+    margin-left: 8px;
+}
+.plan-box a{
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.plan-box a:hover{
+    text-decoration: none;
+}
+
+.btn{
+    display: grid;
+    row-gap: 10px;
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.proceed-btn{
+    background-color: hsl(245, 75%, 52%);
+    padding: 15px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 10px;
+    color: var(--color-white);
+    font-weight: 900;
+    box-shadow: 0px 5px 10px 0px var(--color-desaturatedblue);
+}
+
+.proceed-btn:hover{
+    background-color: var(--color-desaturatedblue);
+    cursor: pointer;
+}
+
+.cancel-btn{
+    background-color: var(--color-white);
+    padding: 15px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 900;
+    color: var(--color-desaturatedblue);
+}
+
+.cancel-btn:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 375px){
+    body{
+        background-image: url(/images/pattern-background-mobile.svg);
+    }
+
+    .container{
+        max-width: 80%;
+    }
+
+    .title{
+        font-size: 23px;
+    }
+
+    div .plan-box{
+        padding: 10px;
+    }
+
+    .btn{
+        font-size: 12px;
+    }
+}
